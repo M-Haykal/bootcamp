@@ -10,42 +10,51 @@ use Illuminate\Support\Facades\Hash;
 
 class LibraryController extends Controller
 {
-    public function index_admin () {
+    public function index_admin()
+    {
         $siswas = Siswa::all();
         return view('index_admin', compact("siswas"));
     }
 
-    public function index_siswa () {
+    public function index_siswa()
+    {
         $siswas = Siswa::all();
         return view('index_siswa', compact("siswas"));
     }
 
-    public function buku() {
+    public function buku()
+    {
         $bukus = buku::all();
         return view('panel_buku_admin', compact("bukus"));
     }
 
-    public function login () {
+    public function login()
+    {
         return view('login');
     }
 
-    public function register () {
+    public function register()
+    {
         return view('partials/register/footer');
     }
 
-    public function profil () {
+    public function profil()
+    {
         // $user_nama = Auth::siswa();
         // dd($user_nama);
+        // dd(auth('siswa')->user());
         return view('profil');
     }
 
-    public function delete_buku($id) {
+    public function delete_buku($id)
+    {
         $buku = Buku::findOrFail($id);
         $buku->delete();
         return redirect()->route('dashboard_admin')->with('success', 'Buku berhasil dihapus');
     }
 
-    public function create_buku(Request $request) {
+    public function create_buku(Request $request)
+    {
         $datas = $request->validate([
             'judul' => 'required|string',
             'penerbit' => 'required|string',
@@ -57,7 +66,8 @@ class LibraryController extends Controller
         return redirect()->route('dashboard_admin')->with('success', 'Buku berhasil ditambahkan');
     }
 
-    public function edit_buku(Request $request, $id) {
+    public function edit_buku(Request $request, $id)
+    {
         $datas = $request->validate([
             'judul' => 'required|string',
             'penerbit' => 'required|string',
@@ -70,7 +80,8 @@ class LibraryController extends Controller
         return redirect()->route('dashboard_admin')->with('success', 'Buku berhasil diedit');
     }
 
-    public function create_siswa(Request $request) {
+    public function create_siswa(Request $request)
+    {
         $siswas = $request->validate([
             'nama' => 'required|string',
             'kelas' => 'required|string',

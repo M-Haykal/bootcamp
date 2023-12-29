@@ -15,7 +15,7 @@ class SiswaSeeder extends Seeder
     public function run(): void
     {
         $data = [
-            ['nama' => 'Lumi', 'kelas' => 'XII PLLG 1', 'role_status' => 'siswa', 'email' => 'lumi@gmail.com', 'password' => Hash::make('Mysql@2023')]
+            ['nama' => 'Haykal', 'kelas' => 'XI PPLG 1', 'role_status' => 'siswa', 'email' => 'hayzees@gmail.com', 'password' => Hash::make('haykal07')]
         ];
 
         foreach ($data as $val){

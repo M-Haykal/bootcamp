@@ -2,7 +2,7 @@
     class="navbar navbar-expand-lg blur blur-rounded top-0 z-index-3 shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
     <div class="container-fluid pe-0">
         <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3 " href="../pages/dashboard.html">
-            Soft UI Dashboard
+            Muhammad Haykal
         </a>
         <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse"
             data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,19 +22,13 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link me-2" href="../pages/profile.html">
-                        <i class="fa fa-user opacity-6 text-dark me-1"></i>
-                        Profile
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link me-2" href="../pages/sign-up.html">
+                    <a class="nav-link me-2" href="{{ route('register_user') }}">
                         <i class="fas fa-user-circle opacity-6 text-dark me-1"></i>
                         Sign Up
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link me-2" href="../pages/sign-in.html">
+                    <a class="nav-link me-2" href="{{ route('login_user') }}">
                         <i class="fas fa-key opacity-6 text-dark me-1"></i>
                         Sign In
                     </a>
@@ -42,7 +36,7 @@
             </ul>
             <li class="nav-item d-flex align-items-center">
                 <a class="btn btn-round btn-sm mb-0 btn-outline-primary me-2" target="_blank"
-                    href="https://www.creative-tim.com/builder?ref=navbar-soft-ui-dashboard">Online Builder</a>
+                    href="https://www.instagram.com/_mhmd_haykall/">Instagram</a>
             </li>
             <ul class="navbar-nav d-lg-block d-none">
                 <li class="nav-item">
